@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jun Wen — Game Developer & Creative Coder. Portfolio showcasing projects, skills, and experience in game development and computer science.">
+  <meta name="theme-color" content="#0a0a0a">
+  <title>Jun Wen — Developer Portfolio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+  <a href="#hero" class="skip-link">Skip to content</a>
+
+  <!-- CRT Scanline Overlay -->
+  <div class="crt-overlay" aria-hidden="true"></div>
+
+  <!-- ===== NAVIGATION ===== -->
+  <header class="nav-header" id="nav-header">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="nav-prompt">$</span> junwen<span class="nav-cursor" aria-hidden="true">_</span>
+      </a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#projects" class="nav-link">~/projects</a></li>
+        <li><a href="#skills" class="nav-link">~/skills</a></li>
+        <li><a href="#contact" class="nav-link">~/contact</a></li>
+      </ul>
+      <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+        <span class="hamburger-line"></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ===== HERO SECTION ===== -->
+  <section class="hero" id="hero">
+    <canvas id="matrix-canvas" aria-hidden="true"></canvas>
+    <div class="hero-content">
+      <div class="boot-sequence" id="boot-sequence" aria-label="Decorative boot sequence animation" role="presentation">
+        <div class="boot-line" data-delay="0">BIOS v3.14.159 ..................... <span class="boot-ok">OK</span></div>
+        <div class="boot-line" data-delay="300">Loading kernel modules ............. <span class="boot-ok">OK</span></div>
+        <div class="boot-line" data-delay="600">Initializing display driver ........ <span class="boot-ok">OK</span></div>
+        <div class="boot-line" data-delay="900">Mounting /dev/portfolio ............. <span class="boot-ok">OK</span></div>
+        <div class="boot-line" data-delay="1200">Starting user session .............. <span class="boot-ok">OK</span></div>
+      </div>
+
+      <div class="hero-main" id="hero-main">
+        <p class="hero-prompt">
+          <span class="prompt-user">visitor</span><span class="prompt-at">@</span><span class="prompt-host">junwen</span><span class="prompt-colon">:</span><span class="prompt-path">~</span><span class="prompt-dollar">$</span>
+          <span class="hero-typed" id="typed-text"></span><span class="hero-cursor" aria-hidden="true">_</span>
+        </p>
+        <h1 class="hero-name">
+          <span class="hero-name-text" id="hero-glitch" data-text="Jun Wen">Jun Wen</span>
+        </h1>
+        <p class="hero-title">
+          <span class="comment-syntax">//</span> Game Developer &middot; Creative Coder &middot; Digital Craftsman
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary"><span class="btn-prompt">$</span> ls projects/</a>
+          <a href="#contact" class="btn btn-primary"><span class="btn-prompt">$</span> mail --compose</a>
+        </div>
+      </div>
+    </div>
+    <div class="hero-scroll" aria-hidden="true">
+      <span class="scroll-text">scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ===== PROJECTS SECTION ===== -->
+  <section class="section" id="projects">
+    <div class="section-container">
+      <h2 class="section-title reveal-up">
+        <span class="prompt-symbol">$</span> ls ~/projects/
+      </h2>
+
+      <div class="projects-grid">
+        <!-- Featured Project -->
+        <div class="terminal-window project-card project-card--featured reveal-up">
+          <div class="terminal-header">
+            <div class="terminal-dots" aria-hidden="true">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+            <span class="terminal-title">cat phantom-engine.md</span>
+          </div>
+          <div class="terminal-body">
+            <div class="project-output">
+              <p class="output-line"><span class="output-hash"># </span><span class="output-heading">Phantom Engine</span></p>
+              <p class="output-line output-blank"></p>
+              <p class="output-line"><span class="output-key">desc: </span>A custom 3D game engine built from scratch with real-time physics simulation, deferred rendering pipeline, and an entity-component system architecture.</p>
+              <p class="output-line output-blank"></p>
+              <p class="output-line">
+                <span class="output-key">stack: </span>
+                <span class="tag tag--green">C++</span>
+                <span class="tag tag--cyan">OpenGL</span>
+                <span class="tag tag--amber">Vulkan</span>
+                <span class="tag tag--green">CMake</span>
+              </p>
+              <p class="output-line"><span class="output-key">status: </span><span class="status-badge"><span class="status-dot"></span>active</span></p>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-link"><span class="btn-prompt">$</span> open demo</a>
+              <a href="#" class="project-link"><span class="btn-prompt">$</span> git clone</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="terminal-window project-card reveal-up">
+          <div class="terminal-header">
+            <div class="terminal-dots" aria-hidden="true">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+            <span class="terminal-title">cat dungeon-crawler.md</span>
+          </div>
+          <div class="terminal-body">
+            <div class="project-output">
+              <p class="output-line"><span class="output-hash"># </span><span class="output-heading">Dungeon Crawler RPG</span></p>
+              <p class="output-line output-blank"></p>
+              <p class="output-line"><span class="output-key">desc: </span>Procedurally generated roguelike dungeon crawler with turn-based combat, loot systems, and pixel art graphics.</p>
+              <p class="output-line output-blank"></p>
+              <p class="output-line">
+                <span class="output-key">stack: </span>
+                <span class="tag tag--green">Unity</span>
+                <span class="tag tag--cyan">C#</span>
+                <span class="tag tag--amber">Aseprite</span>
+              </p>
+              <p class="output-line"><span class="output-key">status: </span><span class="status-badge"><span class="status-dot"></span>released</span></p>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-link"><span class="btn-prompt">$</span> open demo</a>
+              <a href="#" class="project-link"><span class="btn-prompt">$</span> git clone</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="terminal-window project-card reveal-up">
+          <div class="terminal-header">
+            <div class="terminal-dots" aria-hidden="true">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+            <span class="terminal-title">cat shader-lab.md</span>
+          </div>
+          <div class="terminal-body">
+            <div class="project-output">
+              <p class="output-line"><span class="output-hash"># </span><span class="output-heading">Shader Laboratory</span></p>
+              <p class="output-line output-blank"></p>
+              <p class="output-line"><span class="output-key">desc: </span>A collection of custom GLSL/HLSL shaders — water simulation, volumetric fog, cel-shading, and post-processing effects.</p>
+              <p class="output-line output-blank"></p>
+              <p class="output-line">
+                <span class="output-key">stack: </span>
+                <span class="tag tag--green">GLSL</span>
+                <span class="tag tag--cyan">ShaderGraph</span>
+                <span class="tag tag--amber">WebGL</span>
+              </p>
+              <p class="output-line"><span class="output-key">status: </span><span class="status-badge"><span class="status-dot"></span>active</span></p>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-link"><span class="btn-prompt">$</span> open demo</a>
+              <a href="#" class="project-link"><span class="btn-prompt">$</span> git clone</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="terminal-window project-card reveal-up">
+          <div class="terminal-header">
+            <div class="terminal-dots" aria-hidden="true">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+            <span class="terminal-title">cat neon-arena.md</span>
+          </div>
+          <div class="terminal-body">
+            <div class="project-output">
+              <p class="output-line"><span class="output-hash"># </span><span class="output-heading">Neon Arena Online</span></p>
+              <p class="output-line output-blank"></p>
+              <p class="output-line"><span class="output-key">desc: </span>Fast-paced multiplayer arena shooter with rollback netcode, dedicated server architecture, and matchmaking system.</p>
+              <p class="output-line output-blank"></p>
+              <p class="output-line">
+                <span class="output-key">stack: </span>
+                <span class="tag tag--green">Godot</span>
+                <span class="tag tag--cyan">GDScript</span>
+                <span class="tag tag--amber">WebSocket</span>
+              </p>
+              <p class="output-line"><span class="output-key">status: </span><span class="status-badge"><span class="status-dot status-dot--amber"></span>in dev</span></p>
+            </div>
+            <div class="project-actions">
+              <a href="#" class="project-link"><span class="btn-prompt">$</span> open demo</a>
+              <a href="#" class="project-link"><span class="btn-prompt">$</span> git clone</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== SKILLS SECTION ===== -->
+  <section class="section" id="skills">
+    <div class="section-container">
+      <h2 class="section-title reveal-up">
+        <span class="prompt-symbol">$</span> neofetch
+      </h2>
+
+      <div class="terminal-window neofetch-window reveal-up">
+        <div class="terminal-header">
+          <div class="terminal-dots" aria-hidden="true">
+            <span class="dot dot--red"></span>
+            <span class="dot dot--yellow"></span>
+            <span class="dot dot--green"></span>
+          </div>
+          <span class="terminal-title">junwen@portfolio: ~</span>
+        </div>
+        <div class="terminal-body neofetch-body">
+          <div class="neofetch-container">
+            <div class="neofetch-ascii" aria-hidden="true">
+<pre class="ascii-art">
+       ██╗██╗    ██╗
+       ██║██║    ██║
+       ██║██║ █╗ ██║
+  ██   ██║██║███╗██║
+  ╚█████╔╝╚███╔███╔╝
+   ╚════╝  ╚══╝╚══╝
+</pre>
+            </div>
+
+            <div class="neofetch-info">
+              <div class="info-header">
+                <span class="info-user">visitor</span><span class="info-at">@</span><span class="info-host">junwen-portfolio</span>
+              </div>
+              <div class="info-separator">---------------------------------</div>
+
+              <div class="info-line"><span class="info-key">OS:</span> Developer v2.0</div>
+              <div class="info-line"><span class="info-key">Host:</span> Portfolio 2026</div>
+              <div class="info-line"><span class="info-key">Uptime:</span> 3+ years</div>
+              <div class="info-line"><span class="info-key">Shell:</span> creativity/bash</div>
+              <div class="info-spacer"></div>
+
+              <div class="info-line"><span class="info-key">Languages:</span></div>
+              <div class="skill-bar">
+                <span class="skill-name">C#</span>
+                <div class="bar-track"><div class="bar-fill bar-fill--green" data-width="85"></div></div>
+                <span class="skill-pct">85%</span>
+              </div>
+              <div class="skill-bar">
+                <span class="skill-name">C++</span>
+                <div class="bar-track"><div class="bar-fill bar-fill--cyan" data-width="70"></div></div>
+                <span class="skill-pct">70%</span>
+              </div>
+              <div class="skill-bar">
+                <span class="skill-name">JavaScript</span>
+                <div class="bar-track"><div class="bar-fill bar-fill--amber" data-width="65"></div></div>
+                <span class="skill-pct">65%</span>
+              </div>
+              <div class="skill-bar">
+                <span class="skill-name">Python</span>
+                <div class="bar-track"><div class="bar-fill bar-fill--green" data-width="60"></div></div>
+                <span class="skill-pct">60%</span>
+              </div>
+              <div class="info-spacer"></div>
+
+              <div class="info-line"><span class="info-key">Engines:</span></div>
+              <div class="skill-bar">
+                <span class="skill-name">Unity</span>
+                <div class="bar-track"><div class="bar-fill bar-fill--green" data-width="90"></div></div>
+                <span class="skill-pct">90%</span>
+              </div>
+              <div class="skill-bar">
+                <span class="skill-name">Unreal</span>
+                <div class="bar-track"><div class="bar-fill bar-fill--cyan" data-width="65"></div></div>
+                <span class="skill-pct">65%</span>
+              </div>
+              <div class="skill-bar">
+                <span class="skill-name">Godot</span>
+                <div class="bar-track"><div class="bar-fill bar-fill--amber" data-width="60"></div></div>
+                <span class="skill-pct">60%</span>
+              </div>
+              <div class="info-spacer"></div>
+
+              <div class="info-line">
+                <span class="info-key">Tools:</span>
+                <span class="tag tag--green">Git</span>
+                <span class="tag tag--cyan">Docker</span>
+                <span class="tag tag--amber">Linux</span>
+                <span class="tag tag--green">Blender</span>
+                <span class="tag tag--cyan">Figma</span>
+                <span class="tag tag--amber">CI/CD</span>
+                <span class="tag tag--green">WebGL</span>
+                <span class="tag tag--cyan">REST APIs</span>
+              </div>
+              <div class="info-spacer"></div>
+
+              <div class="color-blocks" aria-hidden="true">
+                <span class="color-block" style="background:#1a1a1a"></span>
+                <span class="color-block" style="background:#ff3333"></span>
+                <span class="color-block" style="background:#00ff41"></span>
+                <span class="color-block" style="background:#ffb000"></span>
+                <span class="color-block" style="background:#00d4ff"></span>
+                <span class="color-block" style="background:#ff00ff"></span>
+                <span class="color-block" style="background:#00ffff"></span>
+                <span class="color-block" style="background:#c8c8c8"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT SECTION ===== -->
+  <section class="section" id="contact">
+    <div class="section-container">
+      <h2 class="section-title reveal-up">
+        <span class="prompt-symbol">$</span> mail --compose
+      </h2>
+
+      <div class="contact-grid">
+        <div class="terminal-window reveal-up">
+          <div class="terminal-header">
+            <div class="terminal-dots" aria-hidden="true">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+            <span class="terminal-title">cat contact.txt</span>
+          </div>
+          <div class="terminal-body">
+            <p class="output-line"><span class="output-key">email: </span><a href="mailto:your@email.com" class="terminal-link">your@email.com</a></p>
+            <p class="output-line"><span class="output-key">github: </span><a href="#" class="terminal-link">github.com/junwen</a></p>
+            <p class="output-line"><span class="output-key">linkedin: </span><a href="#" class="terminal-link">linkedin.com/in/junwen</a></p>
+            <p class="output-line"><span class="output-key">twitter: </span><a href="#" class="terminal-link">@junwen</a></p>
+            <p class="output-line output-blank"></p>
+            <p class="output-line"><span class="comment-syntax"># </span><span class="text-muted">Open to collaborations, game jams,</span></p>
+            <p class="output-line"><span class="comment-syntax"># </span><span class="text-muted">and interesting projects.</span></p>
+          </div>
+        </div>
+
+        <div class="terminal-window reveal-up">
+          <div class="terminal-header">
+            <div class="terminal-dots" aria-hidden="true">
+              <span class="dot dot--red"></span>
+              <span class="dot dot--yellow"></span>
+              <span class="dot dot--green"></span>
+            </div>
+            <span class="terminal-title">compose new message</span>
+          </div>
+          <div class="terminal-body">
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <div class="form-group">
+                <label for="name" class="form-label">Name <span class="form-required">*</span></label>
+                <div class="form-input-wrap">
+                  <span class="input-prompt" aria-hidden="true">&gt;</span>
+                  <input type="text" id="name" name="name" class="form-input" required autocomplete="name" placeholder="your name">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="email-input" class="form-label">Email <span class="form-required">*</span></label>
+                <div class="form-input-wrap">
+                  <span class="input-prompt" aria-hidden="true">&gt;</span>
+                  <input type="email" id="email-input" name="_replyto" class="form-input" required autocomplete="email" placeholder="your@email.com">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Message <span class="form-required">*</span></label>
+                <div class="form-input-wrap form-input-wrap--textarea">
+                  <span class="input-prompt" aria-hidden="true">&gt;</span>
+                  <textarea id="message" name="message" class="form-input form-textarea" rows="5" required placeholder="type your message..."></textarea>
+                </div>
+              </div>
+              <button type="submit" class="btn btn-primary btn-submit">
+                <span class="btn-prompt">$</span> send --message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <p class="footer-text"><span class="comment-syntax">//</span> Built by Jun Wen &middot; 2026</p>
+      <p class="footer-text footer-text--dim"><span class="prompt-symbol">$</span> exit</p>
+    </div>
+  </footer>
+
+  <a href="#hero" class="back-to-top" id="back-to-top" aria-label="Back to top"><span>&uarr;</span></a>
+
+  <script src="js/effects.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
