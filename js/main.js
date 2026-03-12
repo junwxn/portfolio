@@ -85,7 +85,7 @@
     return;
   }
 
-  var phrases = ['whoami', 'cat about.txt', './portfolio --interactive', 'sudo make awesome'];
+  var phrases = ['git commit -m "it works trust me"', 'sudo make me a sandwich', '// TODO: fix this later', 'allow claude to run :(){ :|:& };: ?', ':q!', '\u00af\\_(\u30c4)_/\u00af'];
   var phraseIndex = 0;
   var charIndex = 0;
   var isDeleting = false;
